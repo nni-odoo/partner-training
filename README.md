@@ -1,5 +1,6 @@
-# Partner Training
+# INSTRUCTION
 
-Sample code used for the partner training.
-
-Use the branches to check by step.
+Run the following command:
+```
+odoo-bin scaffold library ../addons
+```
