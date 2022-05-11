@@ -1,6 +1,3 @@
 # INSTRUCTION
 
-Run the following command:
-```
-odoo-bin scaffold library ../addons
-```
+Clean up the scaffolded directory so we can start from scratch. You can follow the commits to see the changes
