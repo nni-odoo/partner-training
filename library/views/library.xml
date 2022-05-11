@@ -14,6 +14,12 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+    <record id="action_library_rental" model="ir.actions.act_window">
+        <field name="name">Rentals</field>
+        <field name="res_model">library.rental</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
     <!-- Root Menu -->
     <menuitem
         id="menu_library"
@@ -34,5 +40,12 @@
         parent="menu_library"
         action="action_library_customer"
         sequence="2"/>
+
+    <menuitem
+        id="library_rental_menu"
+        name="Rentals"
+        action="action_library_rental"
+        parent="menu_library"
+        sequence="3"/>
 
 </odoo>
