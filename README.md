@@ -1,3 +1,3 @@
 # INSTRUCTION
 
-Adding entries on the ir.model.access.csv file under security folder
+Adding views (menu and actions) to the UI.
