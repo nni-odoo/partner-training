@@ -1,3 +1,3 @@
 # INSTRUCTION
 
-Add the first 2 basic models (no dependency on other models) along with its fields.
+Adding entries on the ir.model.access.csv file under security folder
