@@ -48,4 +48,27 @@
         parent="menu_library"
         sequence="3"/>
 
+    <!-- Defining Our Own View For Rental -->
+    <record id="view_library_rental_tree" model="ir.ui.view">
+        <field name="name">library.rental.tree</field>
+        <field name="model">library.rental</field>
+        <field name="arch" type="xml">
+            <tree string="Rentals">
+                <field name="book" />
+                <field name="customer" />
+                <field name="rent_date" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_library_book_tree" model="ir.ui.view">
+        <field name="name">library.book.view.tree</field>
+        <field name="model">library.book</field>
+        <field name="arch" type="xml">
+            <tree string="Books">
+                <field name="name" />
+                <field name="isbn" />
+            </tree>
+        </field>
+    </record>
 </odoo>
