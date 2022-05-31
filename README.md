@@ -1,5 +1,3 @@
-# Partner Training
+# INSTRUCTION
 
-Sample code used for the partner training.
-
-Use the branches to check by step.
+Adding views (menu and actions) to the UI.

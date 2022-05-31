@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Actions -->
+    <record id="action_library_book" model="ir.actions.act_window">
+        <field name="name">Library Books</field>
+        <field name="res_model">library.book</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_library_customer" model="ir.actions.act_window">
+        <field name="name">Customers</field>
+        <field name="res_model">library.customer</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_library_rental" model="ir.actions.act_window">
+        <field name="name">Rentals</field>
+        <field name="res_model">library.rental</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Root Menu -->
+    <menuitem
+        id="menu_library"
+        name="Library"
+        sequence="1"/>
+
+    <!-- Book Menu -->
+    <menuitem
+        id="library_book_menu"
+        name="Books"
+        action="action_library_book"
+        parent="menu_library"
+        sequence="1"/>
+
+    <menuitem
+        id="library_customer_menu"
+        name="Customers"
+        parent="menu_library"
+        action="action_library_customer"
+        sequence="2"/>
+
+    <menuitem
+        id="library_rental_menu"
+        name="Rentals"
+        action="action_library_rental"
+        parent="menu_library"
+        sequence="3"/>
+
+    <!-- Defining Our Own View For Rental -->
+    <record id="view_library_rental_tree" model="ir.ui.view">
+        <field name="name">library.rental.tree</field>
+        <field name="model">library.rental</field>
+        <field name="arch" type="xml">
+            <tree string="Rentals">
+                <field name="book" />
+                <field name="customer" />
+                <field name="rent_date" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_library_book_tree" model="ir.ui.view">
+        <field name="name">library.book.view.tree</field>
+        <field name="model">library.book</field>
+        <field name="arch" type="xml">
+            <tree string="Books">
+                <field name="name" />
+                <field name="isbn" />
+            </tree>
+        </field>
+    </record>
+</odoo>
